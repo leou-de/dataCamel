@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<SplitPane dividerPositions="0.29797979797979796" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="916.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.leou.dataCamel.FxMainWindowController">
+  <items>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+         <children>
+            <VBox spacing="30.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Button ellipsisString="" mnemonicParsing="false"  prefHeight="143.0" prefWidth="271.0" text="从 plentymarktes 获取 数据到本地&#10;&#10;DatenExport&#10;&#10;当前日期_logi_EDA_order.csv" wrapText="true" />
+                  <Button ellipsisString="" mnemonicParsing="false" onAction="#act_bt_download_OrderPK_csv" prefHeight="143.0" prefWidth="271.0" text="从 plentymarktes 获取 数据到本地&#10;&#10;_OrderPK@DatenExport@ plentymarktes&#10;&#10;当前日期_OrderPK.csv" wrapText="true" />
+                  <Button mnemonicParsing="false" onAction="#act_bt01" prefHeight="143.0" prefWidth="271.0" text="1&lt;input&gt;order.csv, produc_logistics.xlsx&lt;output&gt;order_logistic.xlsx" wrapText="true" />
+                  <Button mnemonicParsing="false" onAction="#act_bt02" prefHeight="134.0" prefWidth="274.0" text="2&#10;&lt;input&gt;&#10;order_logistic.xlsx" wrapText="true" />
+                  <Button mnemonicParsing="false" onAction="#act_bt03" prefHeight="134.0" prefWidth="306.0" text="3" wrapText="true" />
+               </children>
+               <padding>
+                  <Insets left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </VBox>
+         </children></AnchorPane>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+         <children>
+            <SplitPane dividerPositions="0.2398989898989899" orientation="VERTICAL" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                     <children>
+                        <VBox AnchorPane.bottomAnchor="-0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <Label prefHeight="38.0" prefWidth="434.0" text="Parameter" />
+                              <TextArea fx:id="ta_param" VBox.vgrow="ALWAYS" />
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                     <children>
+                        <TextArea fx:id="ta_result" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </AnchorPane>
+              </items>
+            </SplitPane>
+         </children></AnchorPane>
+  </items>
+</SplitPane>
